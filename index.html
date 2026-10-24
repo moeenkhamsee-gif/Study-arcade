@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10151f">
+  <meta name="description" content="Study Arcade — ثبت مطالعه، توکن‌ها و پاداش روزانه">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>Study Arcade | آرکید مطالعه</title>
+  <style>
+    :root{color-scheme:dark;--bg:#10151f;--panel:#1a2231;--panel2:#202b3d;--text:#f6f7fb;--muted:#aab5c7;--lime:#c6f36a;--purple:#a78bfa;--gold:#ffd166;--silver:#d9e2f2;--red:#ff7892;--line:#354258}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#263149 0,#10151f 56%);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+    .wrap{max-width:720px;margin:auto;padding:22px 16px 40px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}.brand{display:flex;align-items:center;gap:11px}.logo{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,var(--lime),#62d6b4);color:#17202b;font-size:25px;box-shadow:0 8px 24px #c6f36a22}.eyebrow{font-size:12px;color:var(--lime);letter-spacing:1px;font-weight:800}.brand h1{font-size:21px;margin:2px 0 0}.tag{font-size:11px;color:var(--muted)}button,input{font:inherit}button{border:0;cursor:pointer;transition:transform .12s,filter .12s}button:active{transform:scale(.98)}.btn{border-radius:13px;padding:11px 14px;font-weight:800;background:var(--lime);color:#15202a}.btn.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}.btn.small{font-size:12px;padding:9px 11px}.hero{border:1px solid #c6f36a40;background:linear-gradient(135deg,#273547,#1b2637);border-radius:24px;padding:22px;position:relative;overflow:hidden}.hero:after{content:'✦';position:absolute;left:24px;top:8px;color:#c6f36a28;font-size:80px}.hero p{color:var(--muted);margin:5px 0 16px;font-size:14px}.hero h2{font-size:23px;margin:0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}.stat,.card{background:#1a2231dd;border:1px solid var(--line);border-radius:18px;padding:14px}.stat .label{font-size:12px;color:var(--muted)}.stat strong{display:block;font-size:24px;margin-top:5px}.stat .emoji{font-size:17px;margin-left:4px}.card{margin-top:13px}.section-title{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}.section-title h3{margin:0;font-size:16px}.hint{font-size:12px;color:var(--muted);line-height:1.8}.fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field label{display:block;color:var(--muted);font-size:12px;margin:0 0 6px}.field input{width:100%;background:#101722;border:1px solid var(--line);border-radius:12px;padding:13px;color:var(--text);outline:none}.field input:focus{border-color:var(--lime)}.wide{width:100%;margin-top:12px}.reward-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.reward{background:#121a27;border:1px solid var(--line);border-radius:15px;padding:12px 7px;text-align:center}.reward .big{font-size:28px}.reward b{display:block;font-size:13px;margin:5px 0}.reward span{font-size:11px;color:var(--muted)}.history{display:flex;flex-direction:column;gap:8px}.entry{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#121a27;border:1px solid #2c384c;border-radius:13px;padding:11px 12px}.entry .date{font-size:11px;color:var(--muted);margin-top:3px}.pill{white-space:nowrap;border-radius:99px;padding:6px 9px;font-size:11px;font-weight:800}.pill.egg{background:#f1b5f31c;color:#f0b9ff}.pill.silver{background:#d9e2f21b;color:var(--silver)}.pill.gold{background:#ffd1661b;color:var(--gold)}.empty{text-align:center;color:var(--muted);padding:20px 8px;font-size:13px}.footer{text-align:center;color:#77859a;font-size:11px;margin-top:18px}.toast{position:fixed;inset:auto 16px 22px;max-width:500px;margin:auto;background:#263449;border:1px solid #c6f36a80;border-radius:17px;padding:15px;text-align:center;box-shadow:0 12px 40px #0008;z-index:5;animation:pop .25s ease}.toast strong{display:block;color:var(--lime);font-size:17px;margin-bottom:5px}@keyframes pop{from{transform:translateY(12px);opacity:0}to{transform:translateY(0);opacity:1}}.hidden{display:none!important}.danger{color:var(--red)}@media(max-width:440px){.wrap{padding:16px 12px 30px}.stats{gap:7px}.stat{padding:11px}.stat strong{font-size:20px}.hero{padding:18px}.hero h2{font-size:20px}.top .btn{padding:9px;font-size:12px}.reward-grid{gap:6px}.reward{padding:10px 4px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo">✦</div><div><div class="eyebrow">LEVEL UP YOUR FOCUS</div><h1>Study Arcade</h1><div class="tag">آرکیدِ مسیر موفقیتت</div></div></div>
+    <button class="btn secondary small" id="soundBtn" aria-pressed="true">🔊 صدای جایزه: روشن</button>
+  </header>
+  <section class="hero"><div class="eyebrow">TODAY'S MISSION</div><h2>هر دقیقه، یک قدم جلوتر 🎮</h2><p>ساعت مطالعه‌ات رو ثبت کن و بر اساس عملکرد واقعی‌ات جایزه بگیر؛ بدون قرعه‌کشی.</p><button class="btn" onclick="document.getElementById('hours').focus()">ثبت مطالعه +</button></section>
+  <section class="stats">
+    <div class="stat"><div class="label">مطالعهٔ ثبت‌شده</div><strong><span id="totalHours">۰</span><small> ساعت</small></strong></div>
+    <div class="stat"><div class="label">توکن نقره‌ای</div><strong><span class="emoji">🪙</span><span id="silverCount">۰</span></strong></div>
+    <div class="stat"><div class="label">توکن طلایی</div><strong><span class="emoji">🏆</span><span id="goldCount">۰</span></strong></div>
+  </section>
+  <section class="card">
+    <div class="section-title"><h3>🕹️ ثبت عملکرد روزانه</h3><span class="tag">پاداش بر اساس ساعت</span></div>
+    <div class="fields"><div class="field"><label for="hours">ساعت مطالعه</label><input id="hours" type="number" min="0" max="24" step="1" value="0" inputmode="numeric"></div><div class="field"><label for="minutes">دقیقهٔ اضافه</label><input id="minutes" type="number" min="0" max="59" step="1" value="0" inputmode="numeric"></div></div>
+    <p class="hint">زمان مطالعهٔ همان روز را وارد کن. هر روز فقط یک نتیجه ثبت می‌شود؛ اگر همان روز دوباره ثبت کنی، نتیجهٔ قبلی جایگزین می‌شود.</p>
+    <button class="btn wide" id="claimBtn">ثبت نتیجه و دریافت جایزه ✨</button>
+  </section>
+  <section class="card">
+    <div class="section-title"><h3>🎁 جدول پاداش‌ها</h3></div>
+    <div class="reward-grid">
+      <div class="reward"><div class="big">🍆🍆🍆</div><b>کمتر از ۶ ساعت</b><span>۳ بادمجان</span></div>
+      <div class="reward"><div class="big">🥈</div><b>۶ تا کمتر از ۹</b><span>۱ توکن نقره‌ای</span></div>
+      <div class="reward"><div class="big">🥇</div><b>۹ ساعت به بالا</b><span>۱ توکن طلایی</span></div>
+    </div>
+  </section>
+  <section class="card"><div class="section-title"><h3>📜 سابقهٔ مطالعه</h3><button class="btn secondary small" id="exportBtn">خروجی گرفتن</button></div><div class="history" id="history"></div><button class="btn secondary small wide" id="clearBtn">پاک کردن همهٔ سابقه‌ها</button></section>
+  <div class="footer">اطلاعات در حافظهٔ همین مرورگر ذخیره می‌شود. حذف داده‌های مرورگر ممکن است سابقه را پاک کند.</div>
+</div>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"><strong id="toastTitle"></strong><span id="toastText"></span></div>
+<script>
+(()=>{
+ const $=id=>document.getElementById(id); const KEY='studyArcadePwa_v1';
+ let state={history:[],sound:true};
+ try{const saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved&&Array.isArray(saved.history))state={...state,...saved}}catch(e){}
+ const fa=n=>new Intl.NumberFormat('fa-IR',{maximumFractionDigits:2}).format(n);
+ const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){alert('ذخیره‌سازی مرورگر در دسترس نیست. فضای خالی دستگاه را بررسی کن.')}};
+ function rewardFor(hours){if(hours<6)return {type:'egg',label:'۳ بادمجان',emoji:'🍆🍆🍆',title:'مرحلهٔ تمرین ادامه دارد!',detail:'کمتر از ۶ ساعت ثبت شد؛ سه بادمجان دریافت کردی.'};if(hours<9)return {type:'silver',label:'۱ توکن نقره‌ای',emoji:'🥈',title:'توکن نقره‌ای گرفتی!',detail:'بین ۶ تا کمتر از ۹ ساعت مطالعه؛ یک توکن نقره‌ای.'};return {type:'gold',label:'۱ توکن طلایی',emoji:'🥇',title:'جایزهٔ طلایی باز شد!',detail:'۹ ساعت یا بیشتر مطالعه؛ یک توکن طلایی دریافت کردی.'}}
+ function render(){let total=state.history.reduce((s,e)=>s+e.minutes,0);$('totalHours').textContent=fa(Math.round(total/60*10)/10);$('silverCount').textContent=fa(state.history.filter(e=>e.type==='silver').length);$('goldCount').textContent=fa(state.history.filter(e=>e.type==='gold').length);$('soundBtn').textContent=state.sound?'🔊 صدای جایزه: روشن':'🔇 صدای جایزه: خاموش';$('soundBtn').setAttribute('aria-pressed',String(state.sound));let h=$('history');h.innerHTML='';if(!state.history.length){h.innerHTML='<div class="empty">هنوز نتیجه‌ای ثبت نشده؛ اولین مرحله با تو شروع می‌شود! 🚀</div>';return}state.history.slice().sort((a,b)=>b.date.localeCompare(a.date)).slice(0,30).forEach(e=>{let d=document.createElement('div');d.className='entry';let left=document.createElement('div');let title=document.createElement('b');title.textContent=fa(Math.floor(e.minutes/60))+' ساعت و '+fa(e.minutes%60)+' دقیقه';let date=document.createElement('div');date.className='date';date.textContent=e.date;left.append(title,date);let pill=document.createElement('span');pill.className='pill '+e.type;pill.textContent=e.emoji+' '+e.label;d.append(left,pill);h.append(d)})}
+ function beep(){if(!state.sound)return;try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const c=new C();[523.25,659.25,783.99,1046.5].forEach((f,i)=>{const o=c.createOscillator(),g=c.createGain();o.type='triangle';o.frequency.value=f;g.gain.setValueAtTime(.0001,c.currentTime+i*.11);g.gain.exponentialRampToValueAtTime(.12,c.currentTime+i*.11+.025);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+i*.11+.18);o.connect(g);g.connect(c.destination);o.start(c.currentTime+i*.11);o.stop(c.currentTime+i*.11+.2)});setTimeout(()=>c.close(),900)}catch(e){}}
+ let toastTimer;function toast(title,detail){$('toastTitle').textContent=title;$('toastText').textContent=detail;$('toast').classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.add('hidden'),4500)}
+ $('claimBtn').addEventListener('click',()=>{const h=Number($('hours').value),m=Number($('minutes').value);if(!Number.isInteger(h)||!Number.isInteger(m)||h<0||h>24||m<0||m>59||(!h&&!m)||h===24&&m>0){toast('زمان را بررسی کن','ساعت را بین ۰ تا ۲۴ و دقیقه را بین ۰ تا ۵۹ وارد کن؛ زمان باید بیشتر از صفر باشد.');return}const minutes=h*60+m;const r=rewardFor(minutes/60);const date=new Date().toLocaleDateString('en-CA');const old=state.history.findIndex(e=>e.date===date);const entry={date,minutes,type:r.type,label:r.label,emoji:r.emoji};if(old>=0)state.history[old]=entry;else state.history.push(entry);state.history.sort((a,b)=>a.date.localeCompare(b.date));save();render();beep();toast(r.title,r.detail+(old>=0?' نتیجهٔ قبلی امروز جایگزین شد.':''));});
+ $('soundBtn').addEventListener('click',()=>{state.sound=!state.sound;save();render();if(state.sound)beep()});
+ $('clearBtn').addEventListener('click',()=>{if(confirm('مطمئنی همهٔ سابقه‌ها و توکن‌ها پاک شوند؟ این کار قابل برگشت نیست.')){state.history=[];save();render();toast('سابقه پاک شد','می‌توانی از امروز دوباره شروع کنی.')}});
+ $('exportBtn').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='study-arcade-history.json';a.click();URL.revokeObjectURL(url)});
+ render();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+})();
+</script>
+</body>
+</html>
